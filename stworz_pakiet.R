@@ -14,9 +14,9 @@ old_wd <- getwd()
 # ścieżka do folderu gdzie powstaną pliki pakietowe
 # musi zawierać podfolder z wszystkimi funkcjami do pakietu o nazwie
 # nazwapakietu_funkcje
-package_dir <- "P:/Departament Kampanii/ZESPOL_ANALIZ/R/pakiety/budowa_pakietu"
+package_dir <- "C:/R/pakiety/budowa_pakietu"
 # ścieżka z poprzednimi wersjami pakietu
-old_versions_dir <- "P:/Departament Kampanii/ZESPOL_ANALIZ/R/pakiety"
+old_versions_dir <- "C:/R/pakiety/stare_pakiety"
 
 setwd(package_dir)
 options(devtools.desc.author="'First Last <first.last@example.com> [aut, cre]'")
@@ -45,12 +45,12 @@ if(change_ind < length(change_levels)) {
 } 
 new_ver = paste(new_ver_num, collapse = ".")
 
-create(path = "package_name",
+create(path = package_name,
        description = list(Title = "Title",
                           Version = new_ver,
                           Description = "Description",
                           License = "Internal use only",
-                          "Authors@R" = "c(person(given = \"Rafal\", family = \"Glabski\", email = \"rafal.glabski@gnb.pl\", role = c(\"aut\", \"cre\")))", 
+                          "Authors@R" = "c(person(given = \"Rafal\", family = \"Glabski\", email = \"rafal.glabski@mail.pl\", role = c(\"aut\", \"cre\")))", 
                           Author = "Rafal Glabski",
                           Maintainer = "Rafal Glabski <rafal.glabski@mail.pl>",
                           # Hadley mówi, żeby wypisywać tylko Imports, a zamiast Depends
